@@ -6,14 +6,14 @@ using System.IO;
 
 namespace WebFileManager.Models.FilesModels
 {
-    public class Disk
+    public class DisksModel
     {
         public decimal TotalFreeSpace { get; }
         public decimal TotalSize { get; }
         public List<DriveInfo> Disks { get; }
 
 
-        public Disk()
+        public DisksModel()
         {
             Disks = DriveInfo.GetDrives().Where(r => r.IsReady).Where(r => r.DriveType == DriveType.Fixed).ToList();
             TotalSize = Disks.Sum(r => r.TotalSize);

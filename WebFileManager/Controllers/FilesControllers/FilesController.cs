@@ -14,10 +14,11 @@ namespace WebFileManager.Controllers
 {
     public class FilesController : Controller
     {
-        public static Disk disk = new Disk();
+        public static DisksModel disk = new DisksModel();
         [HttpGet]
         public IActionResult Files()
         {
+            FolderModel folderModel = new FolderModel("C:\\");
             DirectoryInfo directoryInfo = new DirectoryInfo("C:\\");
             if (directoryInfo.Exists)
             {
