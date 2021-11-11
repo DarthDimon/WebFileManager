@@ -1,0 +1,11 @@
+{
+  "version": 2,
+  "dgSpecHash": "LFUW356/tRHCltQVFGttz+KJcLelBgy2vVAwkyaw0X+OtZVUrjl7M5wf7OcKoci/C0uAoE22gbGzgC9r+coY/Q==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\dmitr\\.nuget\\packages\\jquery\\1.8.0\\jquery.1.8.0.nupkg.sha512",
+    "C:\\Users\\dmitr\\.nuget\\packages\\microsoft.jquery.unobtrusive.ajax\\3.2.6\\microsoft.jquery.unobtrusive.ajax.3.2.6.nupkg.sha512"
+  ],
+  "logs": []
+}

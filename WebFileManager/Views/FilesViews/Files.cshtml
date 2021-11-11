@@ -1,0 +1,94 @@
+﻿@using WebFileManager.Models.FilesModels
+@using System.IO;
+@{
+    ViewData["Title"] = "Files";
+}
+
+<div id="diskInfo">
+    <div id="tableDisk">
+        <table onclick="VieUnvie()" style="cursor: pointer">
+            <tr>
+                <td>
+                    <img src="~/img/hd_disk_harddisk_162.png" style="height:45px;width:45px" />
+                </td>
+                <td>
+                    <table>
+                        <tr>
+                            <td>
+                                Все пространство дисков
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <progress value="@(WebFileManager.Controllers.FilesController.disk.TotalSize.ToGB(0) - WebFileManager.Controllers.FilesController.disk.TotalFreeSpace.ToGB(0))" max="@WebFileManager.Controllers.FilesController.disk.TotalSize.ToGB(0)"></progress>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                @WebFileManager.Controllers.FilesController.disk.TotalFreeSpace.ToGB() ГБ свободно из @WebFileManager.Controllers.FilesController.disk.TotalSize.ToGB() ГБ
+                            </td>
+                        </tr>
+                    </table>
+                </td>
+            </tr>
+        </table>
+
+        <table id="allDisk" style="display:none">
+            @{foreach (DriveInfo driveInfo in WebFileManager.Controllers.FilesController.disk.Disks)
+                {
+                    <tr>
+                        <td width="45px">
+                        </td>
+                        <td>
+                            <img src="~/img/hd_disk_harddisk_162.png" style="height:45px;width:45px" />
+                        </td>
+                        <td>
+                            <table>
+                                <tr>
+                                    <td>
+                                        локальный диск (@driveInfo.Name.Replace("\\", ""))
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <progress value="@(driveInfo.TotalSize.ToGB(0) - driveInfo.TotalFreeSpace.ToGB(0))" max="@driveInfo.TotalSize.ToGB(0)"></progress>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        @driveInfo.TotalFreeSpace.ToGB() ГБ свободно из @driveInfo.TotalSize.ToGB() ГБ
+                                    </td>
+                                </tr>
+                            </table>
+                        </td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+</div> 
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+</div>
+
+<div id="FileBrowser" style="width:100%; height:auto">
+    <div id="PathView" style="width:30%; height:100%; border-color:red">
+        fff
+    </div>
+    <div id="FilesView" style="width:70%; height:100%; border-color:aqua">
+        sss
+    </div>
+</div>
+
+<script>
+    function VieUnvie() {
+        var table = document.getElementById("allDisk");
+        if (table.style.display == "none") {
+            table.style.display = "block";
+        }
+        else {
+            table.style.display = "none";
+        }
+    }
+</script>

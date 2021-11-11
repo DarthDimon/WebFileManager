@@ -1,0 +1,82 @@
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\appsettings.json
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.exe
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.deps.json
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.runtimeconfig.json
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.runtimeconfig.dev.json
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.dll
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\ref\WebFileManager.dll
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.pdb
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.Views.dll
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.Views.pdb
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.AssemblyReference.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.AssemblyInfoInputs.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.AssemblyInfo.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.CoreCompileInputs.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorAssemblyInfo.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorAssemblyInfo.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\staticwebassets\WebFileManager.StaticWebAssets.Manifest.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\staticwebassets\WebFileManager.StaticWebAssets.xml
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\scopedcss\bundle\WebFileManager.styles.css
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.TagHelpers.input.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.TagHelpers.output.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorCoreGenerate.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\FilesViews\Files.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorTargetAssemblyInfo.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorTargetAssemblyInfo.cs
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.Views.pdb
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.dll
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\ref\WebFileManager.dll
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.pdb
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.genruntimeconfig.cache
+C:\Users\dmitr\Desktop\вс\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.CopyComplete
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\appsettings.Development.json
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\appsettings.json
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.exe
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.deps.json
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.runtimeconfig.json
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.runtimeconfig.dev.json
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\ref\WebFileManager.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.pdb
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.Views.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\bin\Debug\net5.0\WebFileManager.Views.pdb
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.AssemblyReference.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.AssemblyInfoInputs.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.AssemblyInfo.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.CoreCompileInputs.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorAssemblyInfo.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorAssemblyInfo.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\staticwebassets\WebFileManager.StaticWebAssets.Manifest.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\staticwebassets\WebFileManager.StaticWebAssets.xml
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\scopedcss\bundle\WebFileManager.styles.css
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.TagHelpers.input.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.TagHelpers.output.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorCoreGenerate.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\FilesViews\Files.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Home\Index.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Home\Privacy.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\Error.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\_Layout.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\Shared\_ValidationScriptsPartial.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\_ViewImports.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\Razor\Views\_ViewStart.cshtml.g.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorTargetAssemblyInfo.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.RazorTargetAssemblyInfo.cs
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.Views.pdb
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\ref\WebFileManager.dll
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.pdb
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.genruntimeconfig.cache
+C:\Users\dmitr\OneDrive\Рабочий стол\ВС\WebFileManager\WebFileManager\obj\Debug\net5.0\WebFileManager.csproj.CopyComplete
