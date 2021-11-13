@@ -16,22 +16,25 @@ namespace WebFileManager.Models.FilesModels
 
 
         public FolderModel() { }
-        public FolderModel(string path)
-        {
-            ThisDirectoryInfo = new DirectoryInfo(path);
-            Files = ThisDirectoryInfo.GetFiles();
-            Folders = ThisDirectoryInfo.GetDirectories().GetFolderModels();
-            Size += Files.Sum(r => r.Length) + Folders.Sum(r => r.Size);
-
-        }
+        public FolderModel(string path):this(new DirectoryInfo(path)) { }
         public FolderModel(DirectoryInfo directoryInfo)
         {
             ThisDirectoryInfo = directoryInfo;
             Files = directoryInfo.GetFiles();
-            Folders = directoryInfo.GetDirectories().GetFolderModels();
-            Size += Files.Sum(r => r.Length);
-
+            Folders = ThisDirectoryInfo.GetDirectories().Where(r => !r.Attributes.HasFlag(FileAttributes.System) & !r.Attributes.HasFlag(FileAttributes.Hidden)).ToArray().GetFolderModels();
+            Size += Files.Sum(r => r.Length) + Folders.Sum(r => r.Size);
         }
+        public static List<FolderModel> GetFolderModels()
+        {
+            List<FolderModel> folderModels = new List<FolderModel>();
+            //foreach ( var el in WebFileManager.Controllers.FilesController.disk.Disks)
+            //{
+            //    folderModels.Add(new FolderModel(el.Name));
+            //}
+            folderModels.Add(new FolderModel("E:\\"));
+            return folderModels;
+        }
+
     }
     public static class FolderModelMetods
     {
@@ -40,7 +43,14 @@ namespace WebFileManager.Models.FilesModels
             List<FolderModel> folderModels = new List<FolderModel>();
             foreach(DirectoryInfo directoryInfo in directoryInfos)
             {
-                folderModels.Add(new FolderModel(directoryInfo));
+                try
+                {
+                    folderModels.Add(new FolderModel(directoryInfo));
+                }
+                catch 
+                {
+                    var a = 0;
+                }
             }
             return folderModels;
         }

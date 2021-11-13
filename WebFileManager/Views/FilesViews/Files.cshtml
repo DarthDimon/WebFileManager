@@ -66,18 +66,58 @@
             }
         </table>
     </div>
-</div> 
-
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
 </div>
 
+
 <div id="FileBrowser" style="width:100%; height:auto">
-    <div id="PathView" style="width:30%; height:100%; border-color:red">
+    <div id="PathView" class="FileManager" style="width:30%;">
         fff
     </div>
-    <div id="FilesView" style="width:70%; height:100%; border-color:aqua">
-        sss
+    <div id="FilesView" class="FileManager" style="width: 70%; height: 100%;">
+        <table id="FilesAndFolders">
+            <tr>
+                <th> Name </th>
+                <th>Change date</th>
+                <th> Type </th>
+                <th> Size </th>
+            </tr>
+            @{
+                foreach (var folder in WebFileManager.Controllers.FilesController.folderModels[0].Folders)
+                {
+                    <tr class="FileFolderRow">
+                        <td>
+                            <img src="~/img/folder.png" /> @folder.ThisDirectoryInfo.Name
+                        </td>
+                        <td>
+                            @folder.ThisDirectoryInfo.LastWriteTime
+                        </td>
+                        <td>
+                            Folder
+                        </td>
+                        <td>
+                            @folder.Size.ToMB() MB
+                        </td>
+                    </tr>
+                }
+                foreach (var file in WebFileManager.Controllers.FilesController.folderModels[0].Files)
+                {
+                    <tr class="FileFolderRow">
+                        <td>
+                            <img src="~/img/file.png" />@file.Name
+                        </td>
+                        <td>
+                            File
+                        </td>
+                        <td>
+                            @file.Length.ToMB() MB
+                        </td>
+                    </tr>
+                }
+            }
+            <tr>
+                <td></td>
+            </tr>
+        </table>
     </div>
 </div>
 
@@ -91,4 +131,30 @@
             table.style.display = "none";
         }
     }
+
+
+    $(function () {
+        $("tr").dblclick(function (e) {
+            if (this.getElementsByTagName("td")[2].innerText == "Folder") {
+                $(".FileFolderRow").remove();
+
+            }
+            else {
+                alert("i can't open files ");
+            }
+        })
+    })
+
+    function CleareFileFolderRow() {
+    }
 </script>
+<style>
+    .FileManager {
+        border: 4px solid;
+        border-color: blueviolet;
+        float: left;
+    }
+    .FileFolderRow:hover {
+        background-color: aqua;
+    }
+</style>

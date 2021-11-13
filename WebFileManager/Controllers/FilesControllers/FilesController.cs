@@ -15,15 +15,10 @@ namespace WebFileManager.Controllers
     public class FilesController : Controller
     {
         public static DisksModel disk = new DisksModel();
+        public static List<FolderModel> folderModels = FolderModel.GetFolderModels();
         [HttpGet]
         public IActionResult Files()
         {
-            FolderModel folderModel = new FolderModel("C:\\");
-            DirectoryInfo directoryInfo = new DirectoryInfo("C:\\");
-            if (directoryInfo.Exists)
-            {
-                var a=directoryInfo.GetDirectories();
-            }
             return View("~/Views/FilesViews/Files.cshtml");
         }
 

@@ -54,19 +54,21 @@
   },
   "packageFolders": {
     "C:\\Users\\dmitr\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
+      "projectUniqueName": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
       "projectName": "WebFileManager",
-      "projectPath": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
+      "projectPath": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
       "packagesPath": "C:\\Users\\dmitr\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\obj\\",
+      "outputPath": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
         "C:\\Users\\dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
