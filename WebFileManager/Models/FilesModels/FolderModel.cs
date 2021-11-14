@@ -38,6 +38,11 @@ namespace WebFileManager.Models.FilesModels
     }
     public static class FolderModelMetods
     {
+        /// <summary>
+        /// возвращает FolderModel по массиву DirectoryInfo
+        /// </summary>
+        /// <param name="directoryInfos"></param>
+        /// <returns></returns>
         public static List<FolderModel> GetFolderModels(this DirectoryInfo[] directoryInfos)
         {
             List<FolderModel> folderModels = new List<FolderModel>();
@@ -49,10 +54,25 @@ namespace WebFileManager.Models.FilesModels
                 }
                 catch 
                 {
-                    var a = 0;
                 }
             }
             return folderModels;
+        }
+        /// <summary>
+        /// возвращает FolderModel по указанному пути
+        /// </summary>
+        /// <param name="folderModels"></param>
+        /// <param name="fullPath">путь по которому брать модель</param>
+        /// <returns></returns>
+        public static FolderModel GetCurentFolderModel(this List<FolderModel> folderModels, string fullPath)
+        {
+            string[] pathEls = fullPath.Split('\\');
+            FolderModel folderModel = folderModels.FirstOrDefault(r => r.ThisDirectoryInfo.Name.Replace("\\", "") == pathEls[0]);
+            for (int i = 1; i < pathEls.Length; i++)
+            {
+                folderModel = folderModel.Folders.FirstOrDefault(r => r.ThisDirectoryInfo.Name.Trim() == pathEls[i].Trim());
+            }
+            return folderModel;
         }
     }
 }

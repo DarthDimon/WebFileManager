@@ -21,6 +21,11 @@ namespace WebFileManager.Controllers
         {
             return View("~/Views/FilesViews/Files.cshtml");
         }
+        [HttpPost]
+        public ContentResult NewFolder(string folderName, string pathNow)
+        {
+            return Content(folderModels.GetFolderViewModel(pathNow, folderName).ToJson(), "application/json");
+        }
 
     }
 }
