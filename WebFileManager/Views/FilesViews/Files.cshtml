@@ -72,60 +72,62 @@
 <div id="FileBrowser" style="width:100%; height:auto">
     <div id="PanelPath" style="width:100%">
         <div id="PanelPathButtons">
-            <button id="left"><img src="~/img/left.png" width="20px" height="10px" /></button>
-            <button id="right"><img src="~/img/right.png" width="20px" height="10px" /></button>
+            <button id="left" onclick="Back()"><img src="~/img/left.png" width="20px" height="10px" /></button>
+            <button id="right" onclick="Next()"><img src="~/img/right.png" width="20px" height="10px" /></button>
         </div>
         <div id="PathNow">@WebFileManager.Controllers.FilesController.folderModels[0].ThisDirectoryInfo.FullName</div>
     </div>
+    <div id="FileManager">
 
-    <div id="PathView" class="FileManager" style="width:30%;">
-        fff
-    </div>
-    <div id="FilesView" class="FileManager" style="width: 70%; height: 100%;">
-        <table id="FilesAndFolders">
-            <tr>
-                <th> Name </th>
-                <th>Change date</th>
-                <th> Type </th>
-                <th> Size </th>
-            </tr>
-            @{
-                foreach (var folder in WebFileManager.Controllers.FilesController.folderModels[0].Folders)
-                {
-                    <tr class="FileFolderRow">
-                        <td>
-                            <img src="~/img/folder.png" /> @folder.ThisDirectoryInfo.Name
-                        </td>
-                        <td>
-                            @folder.ThisDirectoryInfo.LastWriteTime
-                        </td>
-                        <td>
-                            Folder
-                        </td>
-                        <td>
-                            @folder.Size.ToMB() MB
-                        </td>
-                    </tr>
+        <div id="PathView" class="FileManager" style="width:30%;">
+            fff
+        </div>
+        <div id="FilesView" class="FileManager" style="width: 70%; height: 100%;">
+            <table id="FilesAndFolders">
+                <tr>
+                    <th onclick="Sort(this)"> Name </th>
+                    <th onclick="Sort(this)">Change date</th>
+                    <th onclick="Sort(this)"> Type </th>
+                    <th onclick="Sort(this)"> Size </th>
+                </tr>
+                @{
+                    foreach (var folder in WebFileManager.Controllers.FilesController.folderModels[0].Folders)
+                    {
+                        <tr class="FileFolderRow">
+                            <td>
+                                <img src="~/img/folder.png" /> @folder.ThisDirectoryInfo.Name
+                            </td>
+                            <td>
+                                @folder.ThisDirectoryInfo.LastWriteTime
+                            </td>
+                            <td>
+                                Folder
+                            </td>
+                            <td>
+                                @folder.Size.ToMB() MB
+                            </td>
+                        </tr>
+                    }
+                    foreach (var file in WebFileManager.Controllers.FilesController.folderModels[0].Files)
+                    {
+                        <tr class="FileFolderRow">
+                            <td>
+                                <img src="~/img/file.png" />@file.Name
+                            </td>
+                            <td>
+                                File
+                            </td>
+                            <td>
+                                @file.Length.ToMB() MB
+                            </td>
+                        </tr>
+                    }
                 }
-                foreach (var file in WebFileManager.Controllers.FilesController.folderModels[0].Files)
-                {
-                    <tr class="FileFolderRow">
-                        <td>
-                            <img src="~/img/file.png" />@file.Name
-                        </td>
-                        <td>
-                            File
-                        </td>
-                        <td>
-                            @file.Length.ToMB() MB
-                        </td>
-                    </tr>
-                }
-            }
-            <tr>
-                <td></td>
-            </tr>
-        </table>
+                <tr>
+                    <td></td>
+                </tr>
+            </table>
+        </div>
     </div>
 </div>
 
@@ -157,6 +159,7 @@
                         $(".FileFolderRow").remove();
                         GetFileFolderRow(data);
                         pathNow: $('#PathNow')[0].innerText = data[0]["CurentPath"];
+                        setSes("maxPath", data[0]["CurentPath"]);
                     }
                 })
 
@@ -191,12 +194,81 @@
         }
         $(dbClickRow())
     }
+    function Back() {
+        $.ajax({
+                    url: '@Url.Action("NewFolderBack", "Files")',
+                    data:{
+                        pathNow: $('#PathNow')[0].innerText
+                }
+                    , type: 'POST'
+                    , success: function (data) {
+                        $(".FileFolderRow").remove();
+                        GetFileFolderRow(data);
+                        pathNow: $('#PathNow')[0].innerText = data[0]["CurentPath"];
+                    }
+        })
+        $("#right").prop("disabled", false)
+    }
+    function Next() {
+        var maxPath = getSession("maxPath");
+        if (maxPath == null) { return; }
+        var path = $('#PathNow')[0].innerText;
+        if (maxPath.lncludes(path) && maxPath != path) {
+            var nextFolder = maxPath.substring(path.length + 1);
+            nextFolder = nextFolder.substring(0, nextFolder.indexOf("\\"));
+            $.ajax({
+                    url: '@Url.Action("NewFolderBack", "Files")',
+                data: {
+                    pathNow: path + nextFolder
+                }
+                    , type: 'POST'
+                    , success: function (data) {
+                        $(".FileFolderRow").remove();
+                        GetFileFolderRow(data);
+                        pathNow: $('#PathNow')[0].innerText = data[0]["CurentPath"];
+                    }
+        })
+        }
+        if (maxPath == path) { $("#right").prop("disabled", true); }
+    }
+    function getSession(nameSes) {
+        $.ajax({
+                    url: '@Url.Action("GetSessionValueByName", "Sessions")',
+                    data:{
+                        name: nameSes
+                }
+                    , type: 'POST'
+                    , success: function (data) {
+                        return data;
+                    }
+                })
+    }
+    function setSes(name, val) {
+        $.ajax({
+                    url: '@Url.Action("SetSessionValue", "Sessions")',
+                    data:{
+                        name: name,
+                        value: val
+                }
+                    , type: 'POST'
+                    , success: function (data) {
+                    }
+                })
+    }
+    function Sort(e) {
+        setSes()
+    }
 </script>
 <style>
     .FileManager {
         border: 4px solid;
         border-color: blueviolet;
         float: left
+    }
+
+    #FileManager {
+        margin-top: 5px;
+        height: 700 px;
     }
 
     .FileFolderRow:hover {
@@ -210,9 +282,15 @@
     #PathNow {
         border: 1px solid;
         border-color: blueviolet;
+        margin-left: 80px;
     }
 
     #PanelPathButtons {
         float: left;
+    }
+
+    #FilesView {
+        overflow-y: scroll;
+        padding: 20px;
     }
 </style>

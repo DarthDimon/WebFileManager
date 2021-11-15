@@ -31,7 +31,8 @@ namespace WebFileManager.Models.FilesModels
             //{
             //    folderModels.Add(new FolderModel(el.Name));
             //}
-            folderModels.Add(new FolderModel("E:\\"));
+            folderModels.Add(new FolderModel("C:\\"));
+            folderModels.Add(null);
             return folderModels;
         }
 

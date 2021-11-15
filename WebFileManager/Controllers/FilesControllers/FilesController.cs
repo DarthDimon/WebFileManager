@@ -26,6 +26,11 @@ namespace WebFileManager.Controllers
         {
             return Content(folderModels.GetFolderViewModel(pathNow, folderName).ToJson(), "application/json");
         }
+        [HttpPost]
+        public ContentResult NewFolderBack(string pathNow)
+        {
+            return Content(folderModels.GetFolderViewModel(pathNow.Substring(0, pathNow.LastIndexOf("\\"))).ToJson(), "application/json");
+        }
 
     }
 }

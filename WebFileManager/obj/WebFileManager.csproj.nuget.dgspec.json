@@ -1,21 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj": {}
+    "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj": {}
   },
   "projects": {
-    "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj": {
+    "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
+        "projectUniqueName": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
         "projectName": "WebFileManager",
-        "projectPath": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
+        "projectPath": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\WebFileManager.csproj",
         "packagesPath": "C:\\Users\\dmitr\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\dmitr\\Desktop\\вс\\WebFileManager\\WebFileManager\\obj\\",
+        "outputPath": "C:\\Users\\dmitr\\OneDrive\\Рабочий стол\\ВС\\WebFileManager\\WebFileManager\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
           "C:\\Users\\dmitr\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -45,6 +44,10 @@
         "net5.0": {
           "targetAlias": "net5.0",
           "dependencies": {
+            "Microsoft.AspNetCore.Session": {
+              "target": "Package",
+              "version": "[2.2.0, )"
+            },
             "Microsoft.jQuery.Unobtrusive.Ajax": {
               "target": "Package",
               "version": "[3.2.6, )"
