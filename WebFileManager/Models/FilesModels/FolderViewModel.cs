@@ -24,9 +24,34 @@ namespace WebFileManager.Models.FilesModels
         /// <param name="path">текущий путь</param>
         /// <param name="folderName">папка в которую надо зайти</param>
         /// <returns></returns>
-        public static List<FolderViewModel> GetFolderViewModel(this List<FolderModel> folderModels, string path, string folderName)
+        public static List<FolderViewModel> GetFolderViewModel(this List<FolderModel> folderModels, string path, string folderName, string SortName, string SortType)
         {
-            return folderModels.GetFolderViewModel((path + "\\"+ folderName).Replace("\\\\","\\"));
+            List<FolderViewModel> folderViewModels;
+            if(folderName==null) { folderViewModels = folderModels.GetFolderViewModel((path).Replace("\\\\", "\\")); }
+            else { folderViewModels = folderModels.GetFolderViewModel((path + "\\" + folderName).Replace("\\\\", "\\")); }
+            if (SortName != null)
+            {
+                switch (SortName)
+                {
+                    case "Name":
+                        if (SortType == "Asc") { folderViewModels = folderViewModels.OrderBy(r => r.Name).ToList(); }
+                        else { folderViewModels = folderViewModels.OrderByDescending(r => r.Name).ToList(); }
+                        break;
+                    case "Type":
+                        if (SortType == "Asc") { folderViewModels = folderViewModels.OrderBy(r => r.Type).ToList(); }
+                        else { folderViewModels = folderViewModels.OrderByDescending(r => r.Type).ToList(); }
+                        break;
+                    case "Size":
+                        if (SortType == "Asc") { folderViewModels = folderViewModels.OrderBy(r => r.Size).ToList(); }
+                        else { folderViewModels = folderViewModels.OrderByDescending(r => r.Size).ToList(); }
+                        break;
+                    case "ChangeDate":
+                        if (SortType == "Asc") { folderViewModels = folderViewModels.OrderBy(r => r.ChangeDate).ToList(); }
+                        else { folderViewModels = folderViewModels.OrderByDescending(r => r.ChangeDate).ToList(); }
+                        break;
+                }
+            }
+            return folderViewModels;
         }
         /// <summary>
         /// возвращает FolderViewModel указаной папки

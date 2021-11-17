@@ -62,12 +62,12 @@ namespace WebFileManager.Models.FilesModels
         /// <summary>
         /// возвращает FolderModel по указанному пути
         /// </summary>
-        /// <param name="folderModels"></param>
+        /// <param name="folderModels"> откуда ищет</param>
         /// <param name="fullPath">путь по которому брать модель</param>
         /// <returns></returns>
         public static FolderModel GetCurentFolderModel(this List<FolderModel> folderModels, string fullPath)
         {
-            string[] pathEls = fullPath.Split('\\');
+            string[] pathEls = fullPath.Split('\\').Where(r=>r!="").ToArray();
             FolderModel folderModel = folderModels.FirstOrDefault(r => r.ThisDirectoryInfo.Name.Replace("\\", "") == pathEls[0]);
             for (int i = 1; i < pathEls.Length; i++)
             {

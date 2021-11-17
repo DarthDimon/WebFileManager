@@ -1,4 +1,4 @@
-﻿@using WebFileManager.Models.FilesModels
+﻿@using WebFileManager.Models.FilesModels;
 @using System.IO;
 @{
     ViewData["Title"] = "Files";
@@ -32,11 +32,10 @@
                 </td>
             </tr>
         </table>
-
-        <table id="allDisk" style="display:none">
+        <table id="allDisk" style="display:none; cursor: pointer">
             @{foreach (DriveInfo driveInfo in WebFileManager.Controllers.FilesController.disk.Disks)
                 {
-                    <tr>
+                    <tr class="DiskRow" onclick="getFolder(null,'@(driveInfo.Name+"\\")', null, false)">
                         <td width="45px">
                         </td>
                         <td>
@@ -82,13 +81,13 @@
         <div id="PathView" class="FileManager" style="width:30%;">
             fff
         </div>
-        <div id="FilesView" class="FileManager" style="width: 70%; height: 100%;">
+        <div id="FilesView" class="FileManager" style="width: 70%; ">
             <table id="FilesAndFolders">
                 <tr>
-                    <th onclick="Sort(this)"> Name </th>
-                    <th onclick="Sort(this)">Change date</th>
-                    <th onclick="Sort(this)"> Type </th>
-                    <th onclick="Sort(this)"> Size </th>
+                    <th onclick="Sort(this)" style="cursor: pointer"> Name </th>
+                    <th onclick="Sort(this)" style="cursor: pointer">Change date</th>
+                    <th onclick="Sort(this)" style="cursor: pointer"> Type </th>
+                    <th onclick="Sort(this)" style="cursor: pointer"> Size </th>
                 </tr>
                 @{
                     foreach (var folder in WebFileManager.Controllers.FilesController.folderModels[0].Folders)
@@ -143,16 +142,14 @@
         }
     }
 
-
-    function dbClickRow () {
-        $("tr").dblclick(function (e) {
-            var newFolder = this.getElementsByTagName("td")[0].innerText.trim();
-            if (this.getElementsByTagName("td")[2].innerText == "Folder") {
-                $.ajax({
+    function getFolder(FN, PN, Sor, BK) {
+         $.ajax({
                     url: '@Url.Action("NewFolder", "Files")',
                     data:{
-                        folderName: newFolder
-                        , pathNow: $('#PathNow')[0].innerText
+                        folderName: FN
+                        , pathNow: PN
+                        , orderBy: Sor
+                        , back:BK
                 }
                     , type: 'POST'
                     , success: function (data) {
@@ -162,7 +159,12 @@
                         setSes("maxPath", data[0]["CurentPath"]);
                     }
                 })
-
+    }
+    function dbClickRow () {
+        $(".FileFolderRow").dblclick(function (e) {
+            var newFolder = this.getElementsByTagName("td")[0].innerText.trim();
+            if (this.getElementsByTagName("td")[2].innerText == "Folder") {
+                getFolder(newFolder, $('#PathNow')[0].innerText, null, false)
             }
             else {
                 alert("i can't open files ");
@@ -195,7 +197,7 @@
         $(dbClickRow())
     }
     function Back() {
-        $.ajax({
+        @*$.ajax({
                     url: '@Url.Action("NewFolderBack", "Files")',
                     data:{
                         pathNow: $('#PathNow')[0].innerText
@@ -206,7 +208,8 @@
                         GetFileFolderRow(data);
                         pathNow: $('#PathNow')[0].innerText = data[0]["CurentPath"];
                     }
-        })
+        })*@
+        getFolder(null, $('#PathNow')[0].innerText, null, true);
         $("#right").prop("disabled", false)
     }
     function Next() {
@@ -217,7 +220,7 @@
             var nextFolder = maxPath.substring(path.length + 1);
             nextFolder = nextFolder.substring(0, nextFolder.indexOf("\\"));
             $.ajax({
-                    url: '@Url.Action("NewFolderBack", "Files")',
+                url: '@Url.Action("NewFolderBack", "Files")',
                 data: {
                     pathNow: path + nextFolder
                 }
@@ -232,16 +235,20 @@
         if (maxPath == path) { $("#right").prop("disabled", true); }
     }
     function getSession(nameSes) {
+        var path;
         $.ajax({
-                    url: '@Url.Action("GetSessionValueByName", "Sessions")',
+            url: '@Url.Action("GetSessionValueByName", "Sessions")',
+            async: !1,
                     data:{
                         name: nameSes
                 }
                     , type: 'POST'
-                    , success: function (data) {
-                        return data;
+            , success: function (data) {
+                path = data;
+                return data;
                     }
-                })
+        })
+        return path;
     }
     function setSes(name, val) {
         $.ajax({
@@ -256,8 +263,24 @@
                 })
     }
     function Sort(e) {
-        setSes()
+        @*setSes("SortBy", e.innerText);
+        $.ajax({
+                    url: '@Url.Action("NewFolderBack", "Files")',
+                    data:{
+                        pathNow: $('#PathNow')[0].innerText
+                }
+                    , type: 'POST'
+                    , success: function (data) {
+                        $(".FileFolderRow").remove();
+                        GetFileFolderRow(data);
+                        pathNow: $('#PathNow')[0].innerText = data[0]["CurentPath"];
+                    }
+        })*@
+        getFolder(null, $('#PathNow')[0].innerText, e.innerText, false);
     }
+    //function DiskRowClick(e) {
+    //    getFolder(null, e.innerText, null, false)
+    //}
 </script>
 <style>
     .FileManager {
@@ -292,5 +315,10 @@
     #FilesView {
         overflow-y: scroll;
         padding: 20px;
+        height: 760px;
+        margin-bottom: 90px;
+    }
+    .FileFolderRow{
+        cursor:default;
     }
 </style>

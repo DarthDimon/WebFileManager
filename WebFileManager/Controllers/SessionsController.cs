@@ -14,14 +14,15 @@ namespace WebFileManager.Controllers
         [HttpPost]
         public ContentResult GetSessionValueByName(string name)
         {
-            var a = HttpContext.Session;
+            
             if (HttpContext.Session.Keys.Contains(name))
             {
-                return Content(HttpContext.Session.GetString(name), "application/json");
+                var a = HttpContext.Session.GetString(name);
+                return Content(HttpContext.Session.GetString(name));
             }
             else
             {
-                return Content(null, "application/json");
+                return Content(null);
             }
         }
         [HttpPost]
