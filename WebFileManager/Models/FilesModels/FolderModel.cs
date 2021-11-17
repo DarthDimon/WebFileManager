@@ -27,12 +27,11 @@ namespace WebFileManager.Models.FilesModels
         public static List<FolderModel> GetFolderModels()
         {
             List<FolderModel> folderModels = new List<FolderModel>();
-            //foreach ( var el in WebFileManager.Controllers.FilesController.disk.Disks)
-            //{
-            //    folderModels.Add(new FolderModel(el.Name));
-            //}
-            folderModels.Add(new FolderModel("C:\\"));
-            folderModels.Add(null);
+            foreach (var el in WebFileManager.Controllers.FilesController.disk.Disks)
+            {
+                folderModels.Add(new FolderModel(el.Name));
+            }
+            //folderModels.Add(new FolderModel("C:\\"));
             return folderModels;
         }
 
